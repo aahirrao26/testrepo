@@ -10,9 +10,9 @@
       "outDir": "dist",
       "assets": [
         "assets",
-                "favicon.ico",
-                "manifest.json",
-                "styles.css"
+        "favicon.ico",
+        "manifest.json",
+        "./styles.css"
       ],
       "index": "index.html",
       "main": "main.ts",
