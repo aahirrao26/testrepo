@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { MenuModule, PanelModule, ChartModule, InputTextModule, ButtonModule, InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule, DropdownModule, MultiSelectModule, ListboxModule, SpinnerModule, SliderModule, RatingModule, DataTableModule, ContextMenuModule, TabViewModule, DialogModule, StepsModule, ScheduleModule, TreeModule, GMapModule, DataGridModule, TooltipModule, ConfirmationService, ConfirmDialogModule, GrowlModule, DragDropModule, GalleriaModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
+
 import {RouterModule, Routes} from "@angular/router";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatisticComponent } from './statistic/statistic.component';
@@ -46,7 +47,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes,{useHash:true}),
     BrowserAnimationsModule,
     MenuModule,
     PanelModule,
