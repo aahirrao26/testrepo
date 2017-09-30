@@ -45,4 +45,42 @@
   
     <p-contextMenu #tableContextMenu [model]="contextMenu"></p-contextMenu>
   
+<button pButton label="Add Time" (click)="displayAddDialog = true"></button>
+
+    <p-dialog header="Add New Time Entry"  [(visible)]="displayAddDialog" [modal]="true" [responsive]="true" [width]="700">
+      <form class="ui-g" [formGroup]="addTimeForm"> 
+        <p-panel  class="ui-g-12">
+          <div class="dialogBody">
+            <div class="ui-g">
+              <label for="user" class="ui-g-12 ui-md-2">User</label>
+               <input id="user" formControlName="User" class="ui-g-12 ui-md-10" placeholder="Enter user" type="text" />
+           </div>    
+          <div class="ui-g">
+            <label for="project" class="ui-g-12 ui-md-2">Project</label>
+            <input id="project" formControlName="Project" class="ui-g-12 ui-md-10" placeholder="Enter project" type="text" />
+          </div>
+          
+          <div class="ui-g">
+            <label for="category" class="ui-g-12 ui-md-2">Category</label>
+            <input id="category" formControlName="Category" class="ui-g-12 ui-md-10" placeholder="Enter category" type="text" />
+          </div>
+          
+          <div class="ui-g">
+            <label for="startTime" class="ui-g-12 ui-md-2">StartTime</label>
+            <input id="startTime" formControlName="StartTime" class="ui-g-12 ui-md-10" placeholder="Enter startTime" type="number" />
+          </div>
+          <div class="ui-g">
+            <label for="endTime" class="ui-g-12 ui-md-2">EndTime</label>
+            <input id="endTime" formControlName="EndTime" class="ui-g-12 ui-md-10" placeholder="Enter endTime" type="number" />
+          </div>
+                    
+          <p-footer>
+            <button pButton label="Save" icon="fa-check" (click)="saveNewEntry()"></button>
+            <button pButton label="Cancel" icon="fa-times" (click)="displayAddDialog=false" class="ui-button-secondary"></button>
+            </p-footer>
+          </div>
+          </p-panel>
+      </form>
+    </p-dialog>
+  
   </div>
